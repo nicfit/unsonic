@@ -1,3 +1,4 @@
+paste==2.0.3
 xmltodict==0.11.0
 mishmash[postgres]==0.3b10
 mishmash[web]==0.3b10
