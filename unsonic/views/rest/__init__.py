@@ -478,6 +478,7 @@ def fillCoverArt(session, rows, elem, name):
     if not isinstance(rows, list):
         rows = [rows,]
     for row in rows:
+        assert type(row) in (Artist, Album)
         if row.images is not None and len(row.images) > 0:
             elem.set("coverArt", "%s-%d" % (name, row.images[0].id))
             for art in row.images:

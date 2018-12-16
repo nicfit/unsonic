@@ -1,14 +1,6 @@
-pyramid==1.9.2
-SQLAlchemy==1.2.10
-alembic==1.0.0
-pyramid_mako==1.0.2
-zope.sqlalchemy==1.0
-waitress==1.1.0
-pastedeploy==1.5.2
-paste==2.0.3
-psycopg2-binary==2.7.5
 xmltodict==0.11.0
-mishmash[postgres]==0.3b9
+mishmash[postgres]==0.3b10
+mishmash[web]==0.3b10
 sphinx==1.7.6
 recommonmark==0.4.0
 pylast==2.3.0
