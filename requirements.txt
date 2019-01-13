@@ -1,5 +1,5 @@
-mishmash>=0.3b11
-mishmash[postgres]>=0.3b11
+mishmash>=0.3b12
+mishmash[postgres]>=0.3b12
 
 paste==2.0.3
 xmltodict==0.11.0
