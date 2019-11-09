@@ -9,12 +9,14 @@ services:
         image: unsonic
 
     postgres:
-        image: postgres:9.6-alpine
+        image: postgres:12-alpine
         container_name: PostgreSql-unsonic
         environment:
             POSTGRES_DB: music-dev
             POSTGRES_USER: unsonic
             POSTGRES_PASSWORD: TheFaithSubjectToChange
+        ports:
+            - 45432:5432
 
     unsonic-base: &unsonic-container
         image: unsonic
