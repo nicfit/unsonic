@@ -1,4 +1,4 @@
-mishmash[postgres,web]==0.3b14
+mishmash[postgres,web]==0.3
 pyramid_mako==1.0.2
 pastedeploy>=2.0
 paste>=2.0
