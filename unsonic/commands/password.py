@@ -7,11 +7,9 @@ class Password(Command):
     NAME = "password"
     HELP = "Change a users password."
 
-
     def _initArgParser(self, parser):
         parser.add_argument("username", nargs=1, help="users name")
         parser.add_argument("password", nargs=1, help="users password")
-
 
     def _run(self, args=None):
         super()._run()

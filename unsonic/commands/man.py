@@ -14,15 +14,13 @@ class Man(Command):
     CFG_NEEDED = False
     DB_NEEDED = False
 
-
     def _initArgParser(self, parser):
         parser.add_argument("-l", "--list", action="store_true",
                             help="List the man pages")
         parser.add_argument("page", nargs='?',
                             help="The man page to view, defaults to 'unsonic'")
 
-
-    def run(self, args, config):
+    def run(self, args):
         super()._run()
         if args.list:
             files = glob.glob(os.path.join(self.INSTALL, "*.1"))
