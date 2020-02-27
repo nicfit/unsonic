@@ -20,7 +20,6 @@ class Install(Command):
     CFG_NEEDED = False
     DB_NEEDED = False
 
-
     def _initArgParser(self, parser):
         parser.add_argument("-u", "--user", default="unsonic",
                             help="User to run unsonic as. default: unsonic")
@@ -28,8 +27,7 @@ class Install(Command):
                             help=("Where unsonic's files are located. "
                                   "default: /var/lib/unsonic"))
 
-
-    def run(self, args, config):
+    def run(self, args):
         super()._run()
         cmd = "/bin/bash %s %s %s %s %s" % (
             os.path.join(unsonic.INSTALL, "etc/install.sh"),

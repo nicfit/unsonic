@@ -11,7 +11,6 @@ class AddUser(Command):
     HELP = "Add a user to the database."
     DESC = "Adds a user to the database with the prefered roles."
 
-
     def _initArgParser(self, parser):
         parser.add_argument("-l", "--list-roles", dest="list_roles",
                             action="store_true", help="list the roles available")
@@ -19,7 +18,6 @@ class AddUser(Command):
         parser.add_argument("password", nargs="?", help="users password")
         parser.add_argument("roles", nargs=argparse.REMAINDER,
                             help="users roles")
-
 
     def _run(self, args=None):
         super()._run()

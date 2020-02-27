@@ -84,7 +84,11 @@ def run(args=None):
 
 def main(args=None):
     app = buildApp()
-    return app.main(adjustCmdline(app.arg_parser, args or sys.argv[1:]))
+    try:
+        return app.main(adjustCmdline(app.arg_parser, args or sys.argv[1:]))
+    except FileNotFoundError as not_found:
+        print(f"Configuration not found: {not_found}")
+        return 1
 
 
 if __name__ == "__main__":

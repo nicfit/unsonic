@@ -7,10 +7,8 @@ class DelUser(Command):
     NAME = "deluser"
     HELP = "Delete a user from the database."
 
-
     def _initArgParser(self, parser):
         parser.add_argument("username", nargs=1, help="users name")
-
 
     def _run(self, args=None):
         super()._run()

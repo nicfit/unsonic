@@ -16,14 +16,13 @@ class Serve(Command):
             "documentation for instructions on how to run Unsonic with HTTPS.")
     DB_NEEDED = False
 
-
     def _initArgParser(self, parser):
         parser.add_argument("pserve_args", nargs=argparse.REMAINDER,
                             help="pyramid pserve arguments. Put a '--' before "
                                  "any pserve arguments.")
 
-
-    def run(self, args, config):
+    def run(self, args):
+        config = args.config
         super()._run()
         pargs = args.pserve_args
 
